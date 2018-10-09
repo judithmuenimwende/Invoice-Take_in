@@ -1,0 +1,38 @@
+{% extends 'layout.html'%}
+
+{% block content%}
+<body>
+  <div class="container">
+    <table class="table">
+      <thead>
+    <tr>
+        
+        <th>Email</th>
+        <th>Design Fee</th>
+        <th>Hosting Fee</th>
+        <th>Domain Fee</th>
+        <th>Developer Fee</th>
+       
+
+        
+      </tr>
+    </thead>
+    <tbody>
+     {% for invoice in invoices %} 
+      <tr>
+        
+        <td>{{invoice.user_email}}</td>
+        <td>{{invoice.design_fee}}</td>
+        <td>{{invoice.hosting_fee}}</td>
+        <td>{{invoice.domain_fee}}</td>
+        <td>{{invoice.dev_fee}}</td>
+      </tr>
+      {% endfor %}
+
+    </tbody>
+
+    </table>
+     <a href="{{url_for('new_template')}}">Create New invoice</a>
+  </div>
+</body>
+{% endblock %}

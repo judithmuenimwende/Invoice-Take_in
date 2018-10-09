@@ -1,0 +1,56 @@
+{% extends 'layout.html' %}
+{% block content %}
+
+<body>
+ <div class="container">
+  <form action="{{url_for('generate')}}" method="POST">
+   
+  <div class="form-group">
+    <label for="email1">Email address</label>
+    <input type="email" class="form-control" name="user_email" id="user_email"   placeholder="Enter email">
+   
+  </div>
+    <div class="form-group">
+    <label for="course1">Name</label>
+    <input type="text" class="form-control" name="first_name"  placeholder="First Name">
+   
+  </div>
+  <div class="form-group">
+    <label for="course1"> Last Name</label>
+    <input type="text" class="form-control" name="last_name"  placeholder="Last Nmae">
+   
+  </div>
+  <div class="form-group">
+    <label for="course1">Company</label>
+    <input type="text" class="form-control"  name="company"  placeholder="Company">
+   
+  </div>
+   <div class="form-group">
+    <label for="course1">Design Fee</label>
+    <input type="text" class="form-control" name="design_fee" id="design_fee"  placeholder="Enter Fee">
+   
+  </div>
+ 
+   <div class="form-group">
+    <label for="course1">Hosting Fee</label>
+    <input type="text" class="form-control" name="hosting_fee" id="hosting_fee"  placeholder="Enter Fee">
+   
+  </div>
+   <div class="form-group">
+    <label for="course1">Domain Fee</label>
+    <input type="text" class="form-control" name="domain_fee" id="domain_fee"  placeholder="Enter Fee">
+   
+  </div>
+   <div class="form-group">
+    <label for="course1">Developer Fee</label>
+    <input type="text" class="form-control" name="dev_fee" id="dev_fee"  placeholder="Enter Fee">
+   
+  </div>
+
+  <button type="submit" class="btn btn-primary">Generate</button>
+  <a href=""></a>
+</form>
+
+</div>
+  </body>
+  {% endblock %}
